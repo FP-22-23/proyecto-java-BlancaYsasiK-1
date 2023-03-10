@@ -14,13 +14,9 @@ public class TestFilmoteca {
 		
 		Filmoteca f = new Filmoteca();
 		
-		Pelicula p = new PeliculaImpl("180", LocalDate.now(), "Epic Roasthouse (399 Embarcadero)", "red", "Jayendra", "Umarji Anuradha", "Siddarth");
+		Pelicula p = new PeliculaImpl("180", LocalDate.now(), "Epic Roasthouse (399 Embarcadero)", " ", "Jayendra", "Umarji Anuradha", "Siddarth");
 	
 		f.anadirPelicula(p);
-		System.out.println(f.getPelicula());
-		
-		//listas son elementos mutables
-		f.getPelicula().add(p);
 		System.out.println(f.getPelicula());
 	
 	List<Pelicula> Peliculas = FactoriaPelicula.leerPeliculas("data/Peliculas.csv");

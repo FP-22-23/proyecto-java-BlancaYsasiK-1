@@ -15,7 +15,7 @@ public class FactoriaPelicula {
 		List<Pelicula> res = new ArrayList<Pelicula>();
 		try {
 			List<String> lineas = Files.readAllLines(Paths.get(nombreFichero));//parsea las lineas de fichero
-		for(String linea:lineas) {//de las lineas q tengo voy iterando todas las lineas
+		for(String linea:lineas) {//de las lineas que tengo voy iterando todas las lineas
 			Pelicula p = parsearPelicula(linea);
 			res.add(p);
 		}
@@ -28,11 +28,9 @@ public class FactoriaPelicula {
 	
 	private static Pelicula parsearPelicula(String linea) {
 		String[] trozos = linea.split(",");
-		if(trozos.length != 7) {
+		if(trozos.length != 7) { //si los datos no corresponden a 7 salta un error
 			throw new IllegalArgumentException("La cadena no tiene" + " formato válido");
 	}
-	
-		//checkNombre(trozos[0].trim());
 
 		String titulo = trozos[0].trim();
 		LocalDate fechaEstreno = LocalDate.parse(trozos[1].trim(), DateTimeFormatter.ofPattern("d/M/y")); 
@@ -44,11 +42,7 @@ public class FactoriaPelicula {
 
 		return new PeliculaImpl(titulo, fechaEstreno, localizacion, dato, director, escritor, actor);
 		}
-//	private static void checkNombre(String s) {
-//		if(s.replaceAll(" ", "").equals("")) {
-//			throw new IllegalArgumentException("El nombre no puede estar vacio");
-//		
-//		
-//	}
-}
-
+	
+	
+	}
+	

@@ -21,7 +21,7 @@ public class PeliculaImpl implements Pelicula{
 	}
 
 	public PeliculaImpl(String titulo, LocalDate fechaEstreno, String localizacion, String dato, 
-			 String director, String escritor, String actor) {
+			 String director, String escritor, String actor) {//si el titulo o el actor están vacios me salta un error
 		Checkers.check("titulo no puede ser null", titulo != null);
 		Checkers.check("titulo no puede ser null", actor != null);
 
@@ -128,7 +128,7 @@ public String getTitulo() {
 		return Objects.equals(director, other.director) && Objects.equals(fechaEstreno, other.fechaEstreno)
 				&& Objects.equals(titulo, other.titulo);
 	}
-public int compareTo(PeliculaImpl p) {//se ordenan por artista y titulo.
+public int compareTo(PeliculaImpl p) {//se ordenan por director y titulo.
 	
 	int res = getTitulo().compareTo(p.getTitulo());
 	if(res == 0) {
@@ -137,9 +137,8 @@ public int compareTo(PeliculaImpl p) {//se ordenan por artista y titulo.
 	return res;
 	}
 
-@Override
+
 public int compareTo(Pelicula o) {
-	// TODO Auto-generated method stub
 	return 0;
 }
 }
