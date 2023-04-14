@@ -1,12 +1,13 @@
 package test;
 
-import java.time.LocalDate;    
+import java.time.LocalDate;     
 import java.util.List;
 
 import fp.Filmoteca;
 import fp.FactoriaPelicula;
 import fp.Pelicula;
 import fp.PeliculaImpl;
+import fp.Valoracion;
 
 public class TestFilmoteca {
 
@@ -14,7 +15,7 @@ public class TestFilmoteca {
 		
 		Filmoteca f = new Filmoteca();
 		
-		Pelicula p = new PeliculaImpl("180", LocalDate.now(), "Epic Roasthouse (399 Embarcadero)", " ", "Jayendra", "Umarji Anuradha", "Siddarth");
+		Pelicula p = new PeliculaImpl("180", 8, LocalDate.now(), "Epic Roasthouse (399 Embarcadero)", " ", "Jayendra", "Umarji Anuradha", "Siddart", Valoracion.BUENA, Boolean.TRUE);
 	
 		f.anadirPelicula(p);
 		System.out.println(f.getPelicula());
@@ -25,5 +26,6 @@ public class TestFilmoteca {
 	
 	System.out.println(f2.getPelicula());
 	
-}
+	}
+	
 }
