@@ -8,7 +8,7 @@ import utiles.Checkers;
 public class PeliculaImpl implements Pelicula{ 
 	
 	private String titulo;
-	private Integer duracion;
+	private Integer duracion; //minutos que dura la pelicula
 	private LocalDate fechaEstreno;
 	private String localizacion;
 	private String dato;
