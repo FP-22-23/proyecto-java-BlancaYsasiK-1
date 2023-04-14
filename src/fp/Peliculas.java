@@ -1,6 +1,6 @@
 package fp;
 
-import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -9,7 +9,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 
 public class Peliculas implements Peliculass{
@@ -17,8 +16,15 @@ public class Peliculas implements Peliculass{
 	private List<Pelicula> peliculas;
 	
 	public Peliculas() {
-		this.peliculas = (List<Pelicula>) new HashSet<Pelicula>();
+		peliculas = new ArrayList<Pelicula>();
 	}
+	
+	
+	public Peliculas(Collection<Pelicula> peliculas) {
+		peliculas = new ArrayList<Pelicula>(peliculas);
+	}
+	
+	
 	public Set<Pelicula> getPeliculas(){
 		return new HashSet<Pelicula>(peliculas);
 	}
@@ -38,7 +44,7 @@ public class Peliculas implements Peliculass{
 		}
 	
 		//elimina peliculas
-		public void eliminaCorte(Pelicula p) {
+		public void eliminaPelis(Pelicula p) {
 		peliculas.remove(p);
 	
 		}	
@@ -97,8 +103,7 @@ public class Peliculas implements Peliculass{
 			     return res;
 			     }
 
-
-		public void añdirPremio(Pelicula pelicula) {
+		public void añadirPelicula(Pelicula pelicula) {
 			// TODO Auto-generated method stub
 			
 		}

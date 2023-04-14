@@ -4,6 +4,6 @@ import fp.Pelicula;
 
 public interface Peliculass {
 	
-	public void añdirPremio(Pelicula pelicula);
+	public void añadirPelicula(Pelicula pelicula);
 
 }

@@ -28,7 +28,8 @@ System.out.println("Se han leido " + Peliculas.size() + " peliculas");
 System.out.println(Peliculas);
 System.out.println(peli.getPelisMismaDuracion());
 System.out.println(peli.calcularTituloPorDirector());
-System.out.println(peli.existePeliculaDirectorValoracion("180", Valoracion.MALA));
+System.out.println(peli.existePeliculaDirectorValoracion("Jayendra", Valoracion.MALA));
+System.out.println(peli.getNumeroPelisDirector("Charles Chaplin"));
 	}
 
 }
