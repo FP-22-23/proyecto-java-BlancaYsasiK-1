@@ -30,9 +30,6 @@ public interface Pelicula extends Comparable<Pelicula>{
 	
 	public Valoracion getValoracion();
 	public void setValoracion(Valoracion valoracion);
-	
-//integer: getYear
-//boolean: dirigido por alguien especifico
-//enumerado:¿columna nueva? (valoracion: buena, muy buena, mala)
 
+	
 }

@@ -30,7 +30,7 @@ public class FactoriaPelicula {
 	
 	private static Pelicula parsearPelicula(String linea) {
 		String[] trozos = linea.split(",");
-		if(trozos.length != 7) { //si los datos no corresponden a 8 salta un error
+		if(trozos.length != 10) { //si los datos no corresponden a 8 salta un error
 			throw new IllegalArgumentException("La cadena no tiene" + " formato válido");
 	}
 

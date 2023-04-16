@@ -136,7 +136,7 @@ public String getTitulo() {
 		return ValPos;
 	}
 	
-	@Override
+	
 	public String toString() {
 		return "PeliculaImpl [titulo=" + getTitulo() + ", duracion=" + getDuracion() + ", fechaEstreno=" + getFechaEstreno()
 				+ ", localizacion=" + getLocalizacion() + ", dato=" + getDato() + ", director=" + getDirector() + ", escritor="
